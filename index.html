@@ -1,0 +1,79 @@
+<!--Henrique Sales-->
+<html ng-app="vendaCachaca">
+    <head>
+        <title>Cachaça para venda</title>
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css"
+        <meta name="description" content="Cachaca">
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta charset="UTF-8">
+        <script src="lib/angular/angular.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+        <script src="="http://www.parsecdn.com/js/parse-1.4.2.min.js""></script>
+        <script src="lib/js/js_app.js"></script>
+        <style>
+            .selecionado{
+                background: yellow;
+            }
+            .negrito{
+                font-weight: bold;
+            }
+        </style>
+        
+    <header id="interface">
+        <form class="badge">
+         <div>
+           <label class="control-label" for="inputEmail">E-mail</label>               
+            <input id="inputEmail" type="text" placeholder="Digite o seu e-mail..." />              
+            <label class="control-label" for="inputPassword">Senha</label>               
+            <input id="inputPassword" type="password" placeholder="Digite a sua senha..." />               
+            <label class="checkbox"><input type="checkbox" /> Lembrar senha</label>
+            <button class="btn" type="submit" value="enviar">Acessar</button>
+         </div>
+       </form> 
+       </head>
+    </header>
+    <body ng-controller="vendaCachacaCtrl">
+        <p><p>
+        <div class="jumbotron">
+            <h2>{{app}}.</h2s>
+            <input class="form-control" type="text" ng-model="vendedor.nome" value="envia" placeholder="Nome"/>
+            <input class="form-control" type="number" ng-model="vendedor.quantidade" value="enviar" placeholder="Quantidade de Litros"/>
+           <select class="form-control" ng-model="vendedor.especie" ng-options="tipo.Tipo for tipo in especie">
+               <option value="">Selecione o tipo</option>
+           </select>
+           
+           <button class="btn btn-primary btn-block" onclick="funcao1()" value="Exibir Alert" ng-click="adcionarVendedor(vendedor)" ng-disabled="!vendedor.nome || !vendedor.quantidade">Adcionar vendedor</button>
+           
+            </hr>
+            <table class="table">
+                <!-- <h4 ng-bind="app"></h4>-->
+            <ul id="list-tasks">
+            Carregando...
+            </ul>
+                <tr>
+                    <th></th>
+                    <th>Nome</th>
+                    <th>Quantidade (liros)</th>
+                    <th>Tipo</th>
+                </tr>
+                <tr ng-class="{'selecionado negrito': vendedor.selecionado}" ng-repeat="vendedor in vendedores">
+                    <td><input type="checkbox" ng-model="vendedor.selecionado"/></td>
+                    <td>{{vendedor.nome}}</td>
+                    <td>{{vendedor.quantidade}}</td>
+                    <td>{{vendedor.especie.Tipo}}</td>
+                    
+                </tr>
+                
+            </table>
+            <button class="btn btn-danger btn-block" onclick="funcao2()" value="Exibir Alert" ng-click="excluirVendedor(vendedores)" ng-disabled="!isVendedorSelecionado(vendedores)">Excluir vendedor</button>
+            <!--<h4 class="col-xs-offset-12">Quantidade total: Total(vendedor.quantidade)</h4>-->
+        </div>
+        
+    </body>
+    <footer id="rodape">
+    <p>	<h7>Copyrigth &copy; 2016 - by</h7> <a href="https://www.facebook.com/HiqueSales" target="_blank" >Henrique Sales</a>
+    </footer>
+</html>

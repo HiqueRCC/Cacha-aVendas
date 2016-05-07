@@ -1,0 +1,259 @@
+@charset "utf-8";
+body{
+	font-family:"Arial Black", Gadget, sans-serif; /*estilo de fonte*/
+	font-size: 16px; /*tamanho da fonte*/
+	color: #036; /*cor da fonte*/
+	/*controw space acha as cores*/
+	background-color: #999; /*configuração de cor LEMBRANDO: A ultima configuração das linhas é a que vale!!*/
+}
+div#interface{
+	text-align:center;
+	width: 1265px;
+	background-color:#FFFBF0;
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 20px #FF3;
+	padding: 10px 10px 10px 10px;/*paddin: espaço interno do objeto*/
+}
+div#menu{
+	width: 2500px;
+}
+header#cabecalho{/*border-bottom: configuração de tamanho, cor e formato da divisão do cabeçalho*/
+	border-bottom: 13px #0000FF ;
+	height: 400px;
+	background:url(../imagens/capa%20site.png) no-repeat 0px;
+}
+header#cabecalho img#img{
+	position: absolute;
+	left: 4100px;
+	top: 2000px;
+}
+header#cabecalho h6{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 45pt;
+	color:#F00;
+	text-shadow: 2px 2px 2px #0000FF;
+}
+header#cabecalho h2{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 20pt;
+	color:#333;
+	text-shadow: 2px 2px 2px #CFC;
+}
+p{
+	text-align:justify;
+}
+
+/* Formatação de imagens com legendas*/
+figure.foto-legenda{
+	position:relative;/*posição da legenda na foto selecionada*/
+	border: 7px thin #FF0;
+	box-shadow: 1px 1px 50px #333;/*sombra na imagem*/
+}
+
+figure.foto-legenda figcaption{/*posição da legenda na foto*/
+	position:absolute;
+	opacity:0;
+	top: 0px;
+	background-color: rgba(0, 0, 0, .6);/*rgba() transparência*/
+	color: #FFF;
+	width: 100%;
+	height: 100%;
+	padding: 14px;/*espaçamento de sombra*/
+	box-sizing:border-box;/*espaço dentro da borda*/
+	transition: opacity 1s; /*tempo de duração da legenda ao passar o mause*/
+}
+figure.foto-legenda:hover figcaption{/*efeito de passar o mause por cima e aparecer a legenda da foto*/
+	opacity: 1;
+}
+figure.foto-legenda img{
+	width: 100%;/*largura*/
+	height: 100%;/*altura*/
+}
+
+figure.foto-legenda2 figcaption{/*posição da legenda na foto*/
+	position:absolute;
+	opacity:0;
+	top: 0px;
+	background-color: rgba(0, 0, 0, .6);/*rgba() transparência*/
+	color: #FFF;
+	width: 100%;
+	height: 100%;
+	padding: 14px;/*espaçamento de sombra*/
+	box-sizing:border-box;/*espaço dentro da borda*/
+	transition: opacity 1s; /*tempo de duração da legenda ao passar o mause*/
+}
+figure.foto-legenda2:hover figcaption{/*efeito de passar o mause por cima e aparecer a legenda da foto*/
+	opacity: 1;
+}
+figure.foto-legenda2 img{
+	width: 17%;/*largura*/
+	height: 10%;/*altura*/
+}
+figure.foto-legenda3 figcaption{/*posição da legenda na foto*/
+	position:absolute;
+	opacity:0;
+	top: 0px;
+	color: #FFF;
+	width: 100%;
+	height: 100%;
+	box-sizing:border-box;/*espaço dentro da borda*/
+	transition: opacity 1s; /*tempo de duração da legenda ao passar o mause*/
+}
+figure.foto-legenda3:hover figcaption{/*efeito de passar o mause por cima e aparecer a legenda da foto*/
+	opacity: 0;
+}
+figure.foto-legenda3 img{
+	width: 17%;/*largura*/
+	height: 10%;/*altura*/
+}
+h1{ /*Alterando o titulo e a forma da imagem*/
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size: 30px;
+	color: #000; /*#=cor*/
+	display: inline;
+}
+h2{ /*Alterando o titulo e a forma da imagem*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	color: #000;
+	border-bottom-width: 8px;
+	display: inline; /*Mantem tudo na mesma linha*/
+}
+h3{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#333;
+	display:inline-block;
+}
+h4{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#00F
+	display:inline-block;
+}
+h5{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size:20px;
+	color:#C00;
+	display:inline-block;
+}
+h6{
+
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 65px;
+	color: #F00; 
+	display:inline;/*#=cor*/
+ /*Mantem tudo na mesma linha*/
+}
+h7{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#FFF;
+	display:inline-block;
+}
+a{ /* tirar o sublinhado do link e cores */
+	text-decoration: none;
+	color:#C00;
+}
+a:hover {
+	text-decoration: underline; /* Para aparecer o sublinhado no link quando passar o mause */
+}
+
+nav#menu{
+	display:block; /* faz com que o menu seja exibido como um bloco */
+}
+nav#menu ol{
+	position: absolute; /* para o menu ficar por cima dos documentos */
+	list-style: none;
+	text-transform: uppercase; /*Letras em Maiúsculo */
+	top: 89px;/* posição dos blocos de links na parte de cima*/
+	left:270px;
+}
+nav#menu li{ /* para deixar a lista em horizontal */
+	display: inline-block; /* exibe blocos na mesma linha */
+	background-color: #FFF; /* cor de fundo nos blocos */
+	padding:2px; /* espaço entre os blocos de links */
+	margin:1.8px;
+	transition:background-color 1s;
+}
+nav#link a{
+	text-decoration: none;
+	color:#00F;
+}
+nav#menu li:hover{
+	background-color:#FFF; /* mudança de cores no fundo do bloco*/
+}
+nav#menu h1{
+	display: none;
+}
+nav#menu a{ /* cor e sublinhamento nos links de blocos*/
+	text-decoration: none;
+	color:#000; /*cor da letra no link */
+}
+nav#menu a:hover{ /* mudança da cor do link dos blocos ao se passar o mause */
+	color:#FF0;
+}
+section#corpo{
+	display: block;
+	width: 750px;
+	float: left;/*float left: flutua pelo lado esquerdo*/
+	/*border-right: 3px solid #F00; 
+	linha divisória: border-right: largura tipo cor*/
+		
+}
+section#corpo2{
+	border-top: 3px solid #FF0;
+	display: block;
+	width: 1250px;
+	float: center;
+	margin-bottom: auto;
+	margin-left: 14px;
+	margin-right: auto;
+	margin-top: auto;
+}
+aside#lateral{
+	display: block;
+	width: 400px;
+	float:right; /*float right: flutua pelo lado direito*/
+}
+table#agenda{
+	border: 1px solid #00F;/*borda externa da tabela - espessura, forma e cor*/	
+	border-spacing: 0px; /*espaço entre as linhas das células*/
+	margin-left:auto;/*centraliza a tabela */
+	margin-right:auto;
+}
+table#agenda td{
+	border: 1px solid #666;
+	padding: 7px; /* espaço interno das células */
+	text-align:center; /*alinhamento das letras nas células entre esquerda, direita e centro.*/
+	vertical-align:top; /*faz com que a escrita fique alinhada no topo*/
+}
+table#agenda td.centro{ /*configurando as cores da classe centro*/
+	color: #FF0;
+	background-color:#000;
+	vertical-align: top;
+}
+table#agenta td.direita{
+	background-color: #000;
+}
+table#agenda capition{/*configurando o título da tabela*/
+	color:#000;/*cor das letras no título*/
+	font-size:25pt;/*tamanho*/
+	font-weight:bolder;/*negrito*/
+}
+footer#rodape{
+	clear:both; /* limpa as duas configurações e mostra o conteudo do footer fora da divisão */
+	border-top: 3px solid #FF0;
+	background-color:#333;
+}
+footer#rodape p{
+	text-align: center;
+}
+footer#rodape a{
+	text-decoration: none;
+	color:#000;
+}
+footer#rodape a:hover{ /* mudança da cor do link dos blocos ao se passar o mause */
+	color:#FF0;
+}
